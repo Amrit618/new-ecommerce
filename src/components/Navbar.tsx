@@ -6,7 +6,7 @@ const Navbar = () => {
 const links = ['Home', 'Products', 'Profile', 'Cart']
     
   return (
-    <div className='navbar'>
+     <div className='navbar'>
         {
             links.map(link => (
                 <Link className='link' key = {link}to={link}>{link}</Link>

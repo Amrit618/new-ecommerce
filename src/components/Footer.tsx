@@ -1,10 +1,15 @@
-import React from 'react'
+import styled from "styled-components";
+
+const Container = styled.div`
+padding: 20px;
+letter-spacing:13px;
+`
 
 const  Footer = () => {
   return (
-    <div>
+    <Container>
        Hello footer page
-    </div>
+    </Container>
   )
 }
 
