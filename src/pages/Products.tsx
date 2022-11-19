@@ -61,18 +61,25 @@ const Products = () => {
   `;
 
   return (
+    <div>
+    <h1 style={{padding: '10px',
+    backgroundColor: 'lightblue',
+  textAlign:'center' }}
+    >Scroll down to Find more Amazing Products</h1>
+    
     <Box className="images_container">
 
       {productList.map((product: any) => (
         <Card className="card" key={product.id}>
           <CardHeader title={product.title} />
+          <p>Price €{product.price}</p>
           <img
             onClick={() => navigate(`${product.id}`)}
             className="image_product"
             src={product.images[0]}
             alt="imagespic"
           />
-          <p>Price:{product.price}</p>
+          
           <button onClick={() => handleAddCart(product)}>Store in Cart</button>
         </Card>
       ))}
@@ -86,6 +93,7 @@ const Products = () => {
       />
       </Arrow>
     </Box>
+    </div>
   );
 };
 
