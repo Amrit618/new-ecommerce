@@ -26,7 +26,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <div>
         <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
@@ -37,10 +36,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="cart" element={<Cart />} />
         </Routes>
-        <Footer/>
-        </div>
       </BrowserRouter>
-      
     </>
   );
 }
