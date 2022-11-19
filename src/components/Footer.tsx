@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-padding: 20px;
-letter-spacing:13px;
+display: flex;
+flex-flow: column nowrap;
+height: 100%;
 `
 
 const  Footer = () => {
