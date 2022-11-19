@@ -29,10 +29,6 @@ const Products = () => {
     dispatch(addToCart(product));
   };
 
-  interface myProps {
-    direction: string;
-  }
-
   const onChangePage = (input: "left" | "Right") => {
     if (page > 0 && input === "left") {
       setPage(page - 1);
@@ -54,7 +50,7 @@ const Products = () => {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-evenly;
     position: ;
     top: 0;
     bottom: 0;
@@ -66,12 +62,9 @@ const Products = () => {
 
   return (
     <Box className="images_container">
-      <ArrowLeftOutlined
-        style={{ right: "1px" }}
-        onClick={() => onChangePage("Right")}
-      />
+
       {productList.map((product: any) => (
-        <Card key={product.id}>
+        <Card className="card" key={product.id}>
           <CardHeader title={product.title} />
           <img
             onClick={() => navigate(`${product.id}`)}
@@ -83,10 +76,15 @@ const Products = () => {
           <button onClick={() => handleAddCart(product)}>Store in Cart</button>
         </Card>
       ))}
-            <ArrowRightOutlined
-        style={{ right: "100px" }}
+<Arrow>
+<ArrowLeftOutlined
+        style={{ right: "1px" }}
         onClick={() => onChangePage("Right")}
       />
+            <ArrowRightOutlined
+        onClick={() => onChangePage("Right")}
+      />
+      </Arrow>
     </Box>
   );
 };

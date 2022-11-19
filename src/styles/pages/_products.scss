@@ -1,24 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.images_container{
-position: absolute;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-width: 100vw;
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+.images_container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 300px));
 }
 
-.image_product{
-width: 300px;
-height: 300px;
-object-fit: cover;
-object-position: center;
-margin-right: 30px;
-margin-bottom: 30px;
+.image_product {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+button {
+  background-color: rgb(216, 236, 218);
+  border-radius: 20%;
+  height: 30px;
+  width: 100px;
+}
+button:hover {
+  cursor: pointer;
+}
+/* .image_product{
+display:block;
+} */
 
+.card {
+  display: grid;
+  row-gap: 25px;
+  column-gap: 25px;
+  border-radius: 50%;
+}
+.card:hover {
+  background-color: beige;
 }
