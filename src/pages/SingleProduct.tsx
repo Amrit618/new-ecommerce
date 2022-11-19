@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import useProduct from "../hooks/useProduct";
 import styled from "styled-components";
+import { ProductInCart } from "../types/Products";
+import { addToCart } from "../redux/reducers/cartReducer";
 
 
 const Container = styled.div`
@@ -8,7 +10,8 @@ text-align: center
 `
 const SingleProduct = () => {
   const { productId } = useParams();
-  const product = useProduct(productId);
+  const product = useProduct(productId);  
+
 
   return (
     <Container>
@@ -19,6 +22,7 @@ const SingleProduct = () => {
           <img src={product.images[0]}/> 
           <p>{product.description}</p>
           <h4>Price:{product.price}</h4>
+          <button>Add to cart</button>
         </div>
       ) : (
         <div>Product doesnot exist </div>
@@ -28,3 +32,7 @@ const SingleProduct = () => {
 };
 
 export default SingleProduct;
+function dispatch(arg0: any) {
+  throw new Error("Function not implemented.");
+}
+
