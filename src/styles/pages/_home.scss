@@ -1,0 +1,18 @@
+@import "react-slideshow-image/dist/styles.css";
+.Slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: aqua;
+}
+.image_home{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 25px 450px;
+    height: fit-content;
+}
+.container{
+    padding: 100px;
+}
