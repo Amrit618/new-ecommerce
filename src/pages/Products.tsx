@@ -10,9 +10,9 @@ import {
 import { AddProductAsync } from "../redux/reducers/productReducer";
 import { addToCart } from "../redux/reducers/cartReducer";
 import { Product, ProductInCart } from "../types/Products";
-import { products } from "../test/reducers/fixtures/testProduct";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
+
 const Products = () => {
   const { productList } = useAppSelector((state) => state.productReducer);
   const [page, setPage] = useState(0);
@@ -51,12 +51,11 @@ const Products = () => {
     height: 50px;
     background-color: #fff7f7;
     border-radius: 50%;
-    position:relative;
+    position: relative;
     top: 13px;
     margin: 0px;
     cursor: pointer;
     opacity: 0.5;
-    
   `;
 
   return (
@@ -70,7 +69,6 @@ const Products = () => {
       >
         Scroll down to Find more Amazing Products
       </h1>
-
       <Box className="images_container">
         {productList.map((product: any) => (
           <Card className="card" key={product.id}>
@@ -82,7 +80,6 @@ const Products = () => {
               src={product.images[0]}
               alt="imagespic"
             />
-
             <button onClick={() => handleAddCart(product)}>
               Store in Cart
             </button>

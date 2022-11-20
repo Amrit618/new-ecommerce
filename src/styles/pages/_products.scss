@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 .images_container {
+  
   position: absolute;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
   width: 100vw;
+  object-fit: cover;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 300px));
   background-image: linear-gradient(
