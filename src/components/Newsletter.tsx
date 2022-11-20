@@ -1,14 +1,11 @@
-/* import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
-display: flex;
-`
+  display: flex;
+`;
 
 const Newsletter = () => {
-  return (
-    <Container>Get Notified about our awesome Products</Container>
-  )
-}
+  return <Container>Get Notified about our awesome Products</Container>;
+};
 
-export default Newsletter */
-export{}
+export default Newsletter;

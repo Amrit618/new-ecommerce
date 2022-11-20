@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const SearchContainer = styled.div`
   height: 100px;
@@ -12,7 +12,7 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.div``;
 const Navbar = () => {
-  const links = ["Home", "Products", "Profile", "ShoppingCartIcon"];
+  const links = ["Home", "Products", "Profile", "Cart"];
 
   return (
     <div className="navbar">
@@ -20,9 +20,8 @@ const Navbar = () => {
         <Link className="link" key={link} to={link}>
           {link}
         </Link>
-        
       ))}
-      <ShoppingCartIcon/>
+      <ShoppingCartIcon />
     </div>
   );
 };
