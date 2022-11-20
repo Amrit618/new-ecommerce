@@ -11,6 +11,19 @@
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 300px));
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 76% 10%) 0%,
+    hsl(272deg 51% 18%) 9%,
+    hsl(306deg 50% 24%) 37%,
+    hsl(327deg 57% 34%) 62%,
+    hsl(341deg 56% 45%) 76%,
+    hsl(356deg 66% 57%) 84%,
+    hsl(13deg 91% 62%) 90%,
+    hsl(29deg 100% 59%) 94%,
+    hsl(44deg 100% 53%) 98%,
+    hsl(55deg 100% 50%) 100%
+  );
 }
 
 .image_product {

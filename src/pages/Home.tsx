@@ -11,7 +11,8 @@ const Home = () => {
     <div className="container">
     <Slide>
       <div className="title">
-        <h1>Warm Welcome to our FakeShopping</h1>
+        <h1 style={{alignItems: "center"}}>Free Shipping and discount</h1>
+        <img src="https://cdn.pixabay.com/photo/2017/08/06/17/58/people-2594683__480.jpg"/>
       </div>
       {productList.map((sortitems: any) => (
         <div key={sortitems.id}>
