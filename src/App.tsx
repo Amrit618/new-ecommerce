@@ -10,6 +10,7 @@ import { useAppDispatch, useAppSelector } from "./hooks/appHook";
 import { fetchAllProducts } from "./redux/reducers/productReducer";
 import { fetchAllUsers } from "./redux/reducers/profileReducer";
 import Footer from "./components/Footer";
+/* import Newsletter from "./components/Newsletter"; */
 
 function App() {
   const dispatch = useAppDispatch();
@@ -37,6 +38,8 @@ function App() {
           <Route path="cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
+      {/* <Newsletter/> */}
+      <Footer />
     </>
   );
 }
