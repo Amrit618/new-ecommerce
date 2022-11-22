@@ -19,9 +19,6 @@ const Products = () => {
   const [perPage, setPerPage] = useState(30);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const onDelete = (id: string) => {
-    dispatch(deleteProductAsync(id));
-  };
   const onAdd = (id: string) => {
     dispatch(AddProductAsync(id));
   };

@@ -10,6 +10,7 @@ import { useAppDispatch, useAppSelector } from "./hooks/appHook";
 import { fetchAllProducts } from "./redux/reducers/productReducer";
 import { fetchAllUsers } from "./redux/reducers/profileReducer";
 import Footer from "./components/Footer";
+import { ShoppingCartOutlined } from "@material-ui/icons";
 /* import Newsletter from "./components/Newsletter"; */
 
 function App() {
