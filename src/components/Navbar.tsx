@@ -22,11 +22,13 @@ const Navbar = () => {
           {link}
         </Link>
       ))}
+      
       <Badge badgeContent ={4} color='primary'>
       <ShoppingCartIcon />
       </Badge>
     </div>
   );
 };
+
 
 export default Navbar;
