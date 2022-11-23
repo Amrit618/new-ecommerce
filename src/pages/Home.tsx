@@ -18,7 +18,7 @@ const Home = () => {
               paddingRight: "40px",
             }}
           >
-            Free Shipping and discount
+            Free Shipping with heavy discount
           </h1>
           <img src="https://cdn.pixabay.com/photo/2017/08/06/17/58/people-2594683__480.jpg" />
         </div>
