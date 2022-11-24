@@ -16,14 +16,14 @@ import { ShoppingCartOutlined } from "@material-ui/icons";
 function App() {
   const dispatch = useAppDispatch();
   // const productList = useAppSelector(state=>state.productReducer)
-  const profileList = useAppSelector((state) => state.profileReducer);
+  
   useEffect(() => {
     dispatch(fetchAllProducts({ offset: 0, limit: 30 }));
   }, []);
   useEffect(() => {
     dispatch(fetchAllUsers());
   }, []);
-  console.log(profileList);
+  
 
   return (
     <>

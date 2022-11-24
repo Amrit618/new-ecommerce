@@ -5,9 +5,8 @@ export interface Product {
   price: number;
   images: string[];
   category: Category;
-  
-  
 }
+
 export interface ProductInCart extends Product {
   quantity: number;
   id: number,
