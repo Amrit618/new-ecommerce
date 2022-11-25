@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks/appHook";
 import { addToCart } from "../redux/reducers/cartReducer";
 import { ProductInCart } from "../types/Products";
+import Summary from "./Summary";
 const Cart = () => {
   const { products } = useAppSelector((state) => state.cartReducer);
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Cart = () => {
             ></CardMedia>
             <div>Price:{cartItem.price}</div>
             <div><button>Checkout</button></div>
+            <button onClick={Summary}>See summary</button>
           </div>
         ))}
     </div>
