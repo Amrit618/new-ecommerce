@@ -35,12 +35,16 @@
   object-position: center;
   margin-right: 30px;
   margin-bottom: 30px;
+
 }
 button {
   background-color: rgb(216, 236, 218);
   border-radius: 20%;
   height: 30px;
   width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 button:hover {
   cursor: pointer;
