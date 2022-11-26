@@ -8,7 +8,7 @@ export interface Product {
 }
 
 export interface ProductInCart extends Product {
-  quantity: number;
+  quantity: number,
   id: number,
   direction: string,
   
@@ -18,8 +18,8 @@ export interface Cart {
   
   products: ProductInCart[];
   total: number;
-  totalItem: number
-  cartQuantity:number
+  totalItem: number;
+  cartQuantity:number;
 
 }
 

@@ -9,8 +9,7 @@ const initialState: Cart = {
     total: 0,
     totalItem: 0,
     cartQuantity:0
-     
-}
+     }
 
 export const cartSlice = createSlice({
     name: 'cart reducer',
