@@ -1,10 +1,11 @@
+import { Send } from "@material-ui/icons";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: gray;
   min-width: 1024px;
   min-height: 100px;
 `;
@@ -27,6 +28,7 @@ const Newsletter = () => {
     <Title>Get notifiedd about our trending products </Title>
     <Form>
     <input placeholder=" your mail" style={{padding: '20px', width: '300px'}}/>
+    <Send style={{cursor: 'pointer', marginLeft: '20px'}} />
     </Form>
     </Container>;
 };
