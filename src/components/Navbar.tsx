@@ -11,24 +11,24 @@ const SearchContainer = styled.div`
   float: left;
   padding-right: 120px;
 `;
-const Input = styled.div``;
-const Navbar = () => {
-  const links = ["Home", "Products", "Profile", "Cart"];
 
+const Navbar = () => {
   return (
     <div className="navbar">
-      {links.map((link) => (
-        <Link className="link" key={link} to={link}>
-          {link}
-        </Link>
-      ))}
-      
-      <Badge badgeContent ={4} color='primary'>
-      <ShoppingCartIcon />
+      <ul>
+        <Link to="/">Home</Link>
+      </ul>
+      <ul>
+        <Link to="/products">Products</Link>
+      </ul>
+      <ul>
+        <Link to="/profile">Profile</Link>
+      </ul>
+      <Badge badgeContent={1} color="primary">
+        <ShoppingCartIcon />
       </Badge>
     </div>
   );
 };
-
 
 export default Navbar;
