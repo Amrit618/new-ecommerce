@@ -27,7 +27,8 @@
 }
 .badge {
   display: flex;
-  align-items: 1;
-  justify-content: start;
+  align-items: flex-end;
+  justify-content: flex-end;
   padding: 500px;
+  
 }

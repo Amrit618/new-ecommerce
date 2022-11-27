@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import { Card, CardHeader } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks/appHook";
-import {
-  deleteProductAsync,
-  fetchAllProducts,
-} from "../redux/reducers/productReducer";
+import { fetchAllProducts } from "../redux/reducers/productReducer";
 import { AddProductAsync } from "../redux/reducers/productReducer";
 import { addToCart } from "../redux/reducers/cartReducer";
-import { Product, ProductInCart } from "../types/Products";
+import { ProductInCart } from "../types/Products";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 
 const Products = () => {
   const { productList } = useAppSelector((state) => state.productReducer);
   const [page, setPage] = useState(0);
-  const [perPage, setPerPage] = useState(30);
+  const [perPage, setPerPage] = useState(28);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const onAdd = (id: string) => {
