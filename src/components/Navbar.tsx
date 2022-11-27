@@ -26,12 +26,14 @@ const Navbar = () => {
       <ul>
         <Link to="/profile">Profile</Link>
       </ul>
+      <div className="badge">
       <Badge badgeContent={1} color="primary">
-        <ShoppingCartIcon onClick={() => navigate("/cart")} />
+        <ShoppingCartIcon style= {{display: 'flex', margin: '5px', alignItems:'flex-end'}} onClick={() => navigate("/cart")} />
         <Link to="/ShoppingCartIcon" />
       </Badge>
       <input placeholder="search"></input>
       <Search className="search"></Search>
+      </div>
       </div>
   );
 };

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 .navbar {
   background: rgb(5, 0, 8);
-  background:white;
+  background: white;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -9,20 +9,25 @@
   font-size: 1.2rem;
   z-index: 40;
   top: 0;
-  padding:0.6rem;
+  padding: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 80px;
   min-width: 1500px;
-  margin-right:40px;
-  }
-  .navbar ul{
-    padding: 20px;
-    color:rgb(213, 230, 213);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  margin-right: 40px;
+}
+.navbar ul {
+  padding: 20px;
+  color: rgb(213, 230, 213);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.badge {
+  display: flex;
+  align-items: 1;
+  justify-content: start;
+  padding: 500px;
+}
