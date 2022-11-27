@@ -23,7 +23,6 @@ const Cart = () => {
             ></CardMedia>
             <div>Price:{cartItem.price}</div>
             <div><button>Checkout</button></div>
-            <button onClick={Summary}>See summary</button>
           </div>
         ))}
     </div>
