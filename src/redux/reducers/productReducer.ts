@@ -4,6 +4,7 @@ import axios from "axios";
 
 const initialState: ProductReducerType = {
   productList: [],
+  quantity: undefined
 };
 
 export const fetchAllProducts = createAsyncThunk(

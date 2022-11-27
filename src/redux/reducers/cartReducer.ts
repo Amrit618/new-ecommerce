@@ -3,10 +3,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Cart, Product, ProductInCart } from "../../types/Products";
 
 const initialState: Cart = {
-  products: [],
-  total: 0,
-  totalItem: 0,
-  cartQuantity: 0,
+    products: [],
+    total: 0,
+    totalItem: 0,
+    cartQuantity: 0,
+    quantity: undefined
 };
 
 export const cartSlice = createSlice({

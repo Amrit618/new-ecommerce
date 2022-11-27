@@ -15,6 +15,7 @@ export interface ProductInCart extends Product {
 }
 
 export interface Cart {
+  quantity: any;
   
   products: ProductInCart[];
   total: number;
@@ -30,6 +31,7 @@ export interface Category {
 }
 
 export interface ProductReducerType {
+  quantity: any;
   productList: Product[];
   /* sortedList: Product[]; */
 }

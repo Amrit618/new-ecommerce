@@ -3,6 +3,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@material-ui/core/Badge";
+import { useAppSelector } from "../hooks/appHook";
 
 const SearchContainer = styled.div`
   height: 100px;
@@ -14,6 +15,7 @@ const SearchContainer = styled.div`
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const quantity = useAppSelector ((state) => state.cartReducer.cartQuantity);
 
   return (
     <div className="navbar">
@@ -27,10 +29,10 @@ const Navbar = () => {
         <Link to="/profile">Profile</Link>
       </ul>
       <div className="badge">
-      <Badge badgeContent={1} color="primary">
+        {/* {quantity > 0 && */} <Badge color="primary">
         <ShoppingCartIcon style= {{display: 'flex', margin: '5px', alignItems:'flex-end'}} onClick={() => navigate("/cart")} />
         <Link to="/ShoppingCartIcon" />
-      </Badge>
+      </Badge>{/* } */}
       <input placeholder="search"></input>
       <Search className="search"></Search>
       </div>
