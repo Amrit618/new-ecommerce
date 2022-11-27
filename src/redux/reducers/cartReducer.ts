@@ -18,20 +18,12 @@ export const cartSlice = createSlice({
       const itemIndex = state.products.findIndex(
         (item) => item.id === action.payload.id
       );
-      /*             if (itemIndex >= 0){
-                state.products[itemIndex].cartQuantity +=1
-            } */
       const tempProduct = { ...action.payload, cartQuantity: 1 };
       state.products.push(tempProduct);
     },
     increaseProduct: (state, action: PayloadAction<string>) => {
-      /*             state.products.map((cart) => {
-                if (cart.id == action.payload.id)
-            }) */
     },
     decreaseProduct: (state, action: PayloadAction<string>) => {},
-    //persistent cartinfo
-    //check store subscribe method connect local store and subscribe
   },
   extraReducers: (builder) => {},
 });
