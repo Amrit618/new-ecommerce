@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -13,6 +13,8 @@ const SearchContainer = styled.div`
 `;
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="navbar">
       <ul>
@@ -25,10 +27,12 @@ const Navbar = () => {
         <Link to="/profile">Profile</Link>
       </ul>
       <Badge badgeContent={1} color="primary">
-        <ShoppingCartIcon/>
-        <Link to ="/ShoppingCartIcon"/> 
+        <ShoppingCartIcon onClick={() => navigate("/cart")} />
+        <Link to="/ShoppingCartIcon" />
       </Badge>
-    </div>
+      <input placeholder="search"></input>
+      <Search className="search"></Search>
+      </div>
   );
 };
 
