@@ -9,7 +9,7 @@ width: 100%;
 const Summary = () => {
   return (
     <Container>
-        Hello there I am Summary pages</Container>
+        Hello there I am Summary page</Container>
   )
 }
 

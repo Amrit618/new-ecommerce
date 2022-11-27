@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useAppSelector } from "../hooks/appHook";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   const { productList } = useAppSelector((state) => state.productReducer);
@@ -36,6 +37,7 @@ const Home = () => {
           </div>
         ))}
       </Slide>
+      <Newsletter/>
     </div>
   );
 };
