@@ -36,7 +36,7 @@ function App() {
           <Route path="products/:productId" element={<SingleProduct />} />
           <Route path="cart" element={<Cart />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="cart" element={<Cart />} />
+          <Route path="cart" element={<ShoppingCartOutlined />} />
         </Routes>
       </BrowserRouter>
       {/* <Newsletter/> */}

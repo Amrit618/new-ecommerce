@@ -25,7 +25,8 @@ const Navbar = () => {
         <Link to="/profile">Profile</Link>
       </ul>
       <Badge badgeContent={1} color="primary">
-        <ShoppingCartIcon />
+        <ShoppingCartIcon/>
+        <Link to ="/ShoppingCartIcon"/> 
       </Badge>
     </div>
   );
