@@ -42,7 +42,7 @@ export const AddProductAsync = createAsyncThunk(
   async (productId: string) => {
     try {
       const data = await fetch(
-        `https://api.escuelajs.co/api/v1/products/${productId}`,
+        `https://fakestoreapi.com/products`,
         {
           method: "DELETE",
         }
