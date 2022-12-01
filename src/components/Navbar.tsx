@@ -45,7 +45,9 @@ const Navbar = () => {
         <input placeholder="search"></input>
         <Search style = {{
           width: "40px",
-          height: "25px"}}className="search" ></Search>
+          height: "25px",
+          cursor: "pointer",
+          }}className="search" ></Search>
       </div>
     </div>
   );
