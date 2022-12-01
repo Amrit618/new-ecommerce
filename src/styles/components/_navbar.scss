@@ -17,6 +17,7 @@
   height: 80px;
   min-width: 1500px;
   margin-right: 40px;
+  border: none;
 }
 .navbar ul {
   padding: 20px;
@@ -27,7 +28,7 @@
 }
 .badge {
   display: flex;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   margin-left: 25px;
   margin-bottom: 25px;
