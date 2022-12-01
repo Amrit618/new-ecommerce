@@ -1,5 +1,5 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { Link, useNavigate } from "react-router-dom";
+import { CenterFocusStrong, Search } from "@material-ui/icons";
 import styled from "styled-components";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@material-ui/core/Badge";
@@ -31,7 +31,13 @@ const Navbar = () => {
       <div className="badge">
         <Badge color="primary">
           <ShoppingCartIcon
-            style={{ display: "flex", margin: "5px", alignItems: "flex-end", cursor: 'pointer' }}
+            style={{
+              display: "flex",
+             marginRight: "10px",
+              margin: "5px",
+              cursor: "pointer",
+
+            }}
             onClick={() => navigate("/cart")}
           />
           <Link to="/ShoppingCartIcon" />
