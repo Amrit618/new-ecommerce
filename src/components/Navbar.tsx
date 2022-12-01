@@ -15,7 +15,7 @@ const SearchContainer = styled.div`
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const quantity = useAppSelector ((state) => state.cartReducer.cartQuantity);
+  const quantity = useAppSelector((state) => state.cartReducer.cartQuantity);
 
   return (
     <div className="navbar">
@@ -29,14 +29,18 @@ const Navbar = () => {
         <Link to="/profile">Profile</Link>
       </ul>
       <div className="badge">
-        {/* {quantity > 0 && */} <Badge color="primary">
-        <ShoppingCartIcon style= {{display: 'flex', margin: '5px', alignItems:'flex-end'}} onClick={() => navigate("/cart")} />
-        <Link to="/ShoppingCartIcon" />
-      </Badge>{/* } */}
-      <input placeholder="search"></input>
-      <Search className="search"></Search>
+        <Badge color="primary">
+          <ShoppingCartIcon
+            style={{ display: "flex", margin: "5px", alignItems: "flex-end", cursor: 'pointer' }}
+            onClick={() => navigate("/cart")}
+          />
+          <Link to="/ShoppingCartIcon" />
+        </Badge>
+        {/* } */}
+        <input placeholder="search"></input>
+        <Search className="search"></Search>
       </div>
-      </div>
+    </div>
   );
 };
 
