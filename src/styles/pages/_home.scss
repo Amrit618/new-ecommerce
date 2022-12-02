@@ -5,6 +5,7 @@
     justify-content: center;
     padding: 40px;
     background-color: rgb(27, 34, 34);
+    min-width: 1500px;
 }
 .image_home{
     display: flex;
@@ -32,12 +33,14 @@
         hsl(44deg 100% 53%) 98%,
         hsl(55deg 100% 50%) 100%
       );
+      
 }
 .title{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 19px;
+    min-width: 1500px;
 }
 
 @keyframes slide {
@@ -60,5 +63,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
+    }

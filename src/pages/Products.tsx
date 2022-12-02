@@ -59,6 +59,7 @@ const Products = () => {
           padding: "10px",
           backgroundColor: "lightblue",
           textAlign: "center",
+          minWidth: "1500px",
         }}
       >
         Scroll down to Find more Amazing Products
