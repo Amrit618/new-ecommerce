@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Product } from "../types/Products";
 
 const useProduct = (productId: string | undefined) => {
-  const [product, setProduct] = useState<Product | undefined>(undefined);
+const [product, setProduct] = useState<Product | undefined>(undefined);
 
   useEffect(() => {
     if (productId) {
