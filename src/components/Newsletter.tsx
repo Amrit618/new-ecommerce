@@ -25,7 +25,7 @@ color: white;
 
 const Newsletter = () => {
   return <Container>
-    <Title>Get notifiedd about our trending products </Title>
+    <Title>Get notified about our trending products </Title>
     <Form>
     <input placeholder=" your mail" style={{padding: '20px', width: '300px'}}/>
     <Send style={{cursor: 'pointer', marginLeft: '20px'}} />

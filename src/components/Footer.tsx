@@ -95,9 +95,7 @@ const Footer = ({ src }: string | any) => {
         <Left>
           <Logo>TRENDING SHOP</Logo>
           <Desc>
-            We have been serving our customers since 12 years and as we
-            contacted them, they all are satisfied and happy. Don't miss your
-            chance to get higly quality products.
+              You will never regret shopping with us.
           </Desc>
           <SocialContainer>
             <SocialIcon color="3B5999">
@@ -124,7 +122,6 @@ const Footer = ({ src }: string | any) => {
             <ListItem>Accessories </ListItem>
             <ListItem>My Accout </ListItem>
             <ListItem>Order Tracking </ListItem>
-            <ListItem>Wishlist </ListItem>
             <ListItem>Wishlist </ListItem>
             <ListItem>Terms </ListItem>
           </List>
