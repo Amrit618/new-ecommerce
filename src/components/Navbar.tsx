@@ -33,9 +33,12 @@ const Navbar = () => {
           <ShoppingCartIcon
             style={{
               display: "flex",
-             marginRight: "120px",
+              marginRight: "120px",
               margin: "0px",
               cursor: "pointer",
+              position: "relative",
+              left: "7cm",
+              
             }}
             onClick={() => navigate("/cart")}
           />
@@ -45,7 +48,7 @@ const Navbar = () => {
         <input placeholder="search"></input>
         <Search style = {{
           width: "40px",
-          height: "25px",
+          height: "35px",
           cursor: "pointer",
           }}className="search" ></Search>
       </div>

@@ -10,27 +10,32 @@ const Container = styled.div`
   min-height: 100px;
 `;
 const Form = styled.div`
-display:flex;
-align-items: center;
-justify-content: center;
-padding: 50px;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+`;
 
 const Title = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-color: white;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+`;
 
 const Newsletter = () => {
-  return <Container>
-    <Title>Get notified about our trending products </Title>
-    <Form>
-    <input placeholder=" your mail" style={{padding: '20px', width: '300px'}}/>
-    <Send style={{cursor: 'pointer', marginLeft: '20px'}} />
-    </Form>
-    </Container>;
+  return (
+    <Container>
+      <Title>Get notified about our trending products </Title>
+      <Form>
+        <input
+          placeholder=" your mail"
+          style={{ padding: "20px", width: "300px" }}
+        />
+        <Send style={{ cursor: "pointer", marginLeft: "20px" }} />
+      </Form>
+    </Container>
+  );
 };
 
 export default Newsletter;
