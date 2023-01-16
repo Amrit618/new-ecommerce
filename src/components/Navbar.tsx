@@ -44,7 +44,7 @@ const Navbar = () => {
           />
           <Link to="/ShoppingCartIcon" />
         </Badge>
-        {/* } */}
+        
         <input placeholder="search"></input>
         <Search style = {{
           width: "40px",
