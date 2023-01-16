@@ -14,6 +14,8 @@ interface Payment {
 }
 
 const Container = styled.div`
+  width: 100%;
+  height:100%;
   display: flex;
   background: rgb(5, 0, 8);
   background: linear-gradient(
@@ -46,6 +48,7 @@ const SocialIcon = styled.div`
   border-radius: 50%;
   color: white;
   display: flex;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
@@ -72,6 +75,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  hover: cursor;
 `;
 
 const Right = styled.div`
