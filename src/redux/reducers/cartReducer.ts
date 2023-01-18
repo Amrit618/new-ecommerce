@@ -1,8 +1,9 @@
-import { ProductionQuantityLimits } from "@mui/icons-material";
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Cart, Product, ProductInCart } from "../../types/Products";
 
 const initialState: Cart = {
+    
     products: [],
     total: 0,
     totalItem: 0,
@@ -10,23 +11,49 @@ const initialState: Cart = {
     quantity: undefined
 };
 
-export const cartSlice = createSlice({
-  name: "cart reducer",
+const cartSlicer = createSlice({
+  name: 'cart',
   initialState: initialState,
   reducers: {
-    addToCart: (state, action) => {
+    addToCart(state, action: PayloadAction<Cart>) {
       const itemIndex = state.products.findIndex(
-        (item) => item.id === action.payload.id
-      );
-      const tempProduct = { ...action.payload, cartQuantity: 1 };
-      state.products.push(tempProduct);
+        (item: { id: any; }) => item.id === action.payload.id
+      )
+      if (itemIndex >= 0) {
+        if (action.payload.quantity > 1) {
+          state.products[itemIndex].quantity =
+            state.products[itemIndex].quantity + action.payload.quantity
+        }
+        if (
+          action.payload.quantity === undefined ||
+          action.payload.quantity === 0 ||
+          action.payload.quantity === 1
+        ) {
+          state.products[itemIndex].quantity++
+        }
+      } else {
+        state.products.push({
+          ...action.payload,
+          quantity: action.payload.quantity ? action.payload.quantity : 1,
+        })
+      }
     },
-    increaseProduct: (state, action: PayloadAction<string>) => {
+    deleteItem(state, action: PayloadAction<string>) {
+      state.products = state.products.filter((item) => item.id !== action.payload)
     },
-    decreaseProduct: (state, action: PayloadAction<string>) => {},
+    decrement(state, action: PayloadAction<string>) {
+      const itemIndex = state.products.findIndex(
+        (item) => item.id === action.payload
+      )
+      if (state.products[itemIndex].quantity > 1) {
+        state.products[itemIndex].quantity--
+      } else {
+        state.products = state.products.filter((item) => item.id !== action.payload)
+      }
+    },
   },
   extraReducers: (builder) => {},
-});
-export const cartReducer = cartSlice.reducer;
-export const { addToCart, increaseProduct, decreaseProduct } =
-  cartSlice.actions;
+})
+
+export const { addToCart, deleteItem, decrement } = cartSlicer.actions
+export default cartSlicer.reducer
