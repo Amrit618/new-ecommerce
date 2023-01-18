@@ -15,8 +15,8 @@ export interface ProductInCart extends Product {
 }
 
 export interface Cart {
+  id: string,
   quantity: any;
-  
   products: ProductInCart[];
   total: number;
   totalItem: number;
