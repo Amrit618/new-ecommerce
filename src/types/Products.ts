@@ -8,20 +8,18 @@ export interface Product {
 }
 
 export interface ProductInCart extends Product {
-  quantity: number,
-  id: number,
-  direction: string,
-  
+  quantity: number;
+  id: number;
+  direction: string;
 }
 
 export interface Cart {
-  id: string,
+  id: string;
   quantity: any;
   products: ProductInCart[];
   total: number;
   totalItem: number;
-  cartQuantity:number;
-
+  cartQuantity: number;
 }
 
 export interface Category {
@@ -43,7 +41,7 @@ export interface ProductPostType {
   images: string[];
   categoryId: number;
 }
-export interface offsetLimit{
-  offset: number,
-  limit: number
+export interface offsetLimit {
+  offset: number;
+  limit: number;
 }
