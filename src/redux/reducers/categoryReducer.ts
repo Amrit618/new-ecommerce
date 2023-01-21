@@ -3,7 +3,7 @@ import axios from "axios";
 import { Category, Product } from "../../types/Products";
 
 const initalState: Category = {
-  categoryList: [],
+  productList: [],
 };
 
 export const fetchAllCategories = createAsyncThunk(
@@ -38,10 +38,10 @@ const categorySlicer = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllCategories.fulfilled, (state, action) => {
-        state.categoryList = action.payload;
+        state.productList = action.payload;
       })
       .addCase(addCategory.fulfilled, (state, action) => {
-        state.categoryList.push(action.payload);
+        state.productList.push(action.payload);
       });
   },
 });
