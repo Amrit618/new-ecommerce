@@ -29,5 +29,6 @@ const profileSlice = createSlice({
     });
   },
 });
+
 export const profileReducer = profileSlice.reducer;
 export const { login } = profileSlice.actions;
