@@ -3,6 +3,7 @@ import axios from "axios";
 import {UserReducerState, User, LoginType, } from '../../types/user'
 
 export const initialState: UserReducerState = {
+    categoryList:[],
     userlist: [],
     currentUser: undefined
 }
@@ -14,7 +15,6 @@ export const fetchAllUsers = createAsyncThunk(
             return response.data
         } else {
             return []
-            
         }
     })
 
