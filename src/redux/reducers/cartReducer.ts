@@ -1,46 +1,33 @@
-import { Category } from "@material-ui/icons";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Cart } from "../../types/Products";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Cart, Product } from '../../types/Products';
 
 const initialState: Cart = {
   products: [],
   total: 0,
   totalItem: 0,
   cartQuantity: 0,
-  quantity: 1,
-  
+  id: '',
+  quantity: undefined
 };
 
-const cartSlicer = createSlice({
-  name: "cart",
+const cartSlice = createSlice({
+  name: 'cart',
   initialState: initialState,
   reducers: {
-    addToCart(state, action: PayloadAction<Cart>) {
+    addToCart(state, action: PayloadAction<Product>) {
       const itemIndex = state.products.findIndex(
-        (item: { id: any }) => item.id === action.payload.id
+        (item: Product) => item.id === action.payload.id
       );
       if (itemIndex >= 0) {
-        if (action.payload.quantity > 1) {
-          state.products[itemIndex].quantity =
-            state.products[itemIndex].quantity + action.payload.quantity;
-        }
-        if (
-          action.payload.quantity === undefined ||
-          action.payload.quantity === 0 ||
-          action.payload.quantity === 1
-        ) {
+        if (action.payload.quantity && action.payload.quantity > 0) {
+          state.products[itemIndex].quantity += action.payload.quantity;
+        } else {
           state.products[itemIndex].quantity++;
         }
       } else {
         state.products.push({
           ...action.payload,
           quantity: action.payload.quantity ? action.payload.quantity : 1,
-          direction: "",
-          title: "",
-          description: "",
-          price: 0,
-          images: [],
-          category: Category,
         });
       }
     },
@@ -53,17 +40,16 @@ const cartSlicer = createSlice({
       const itemIndex = state.products.findIndex(
         (item) => item.id === action.payload
       );
-      if (state.products[itemIndex].quantity > 1) {
-        state.products[itemIndex].quantity--;
-      } else {
-        state.products = state.products.filter(
-          (item) => item.id !== action.payload
-        );
+      if (itemIndex >= 0) {
+        if (state.products[itemIndex].quantity > 1) {
+          state.products[itemIndex].quantity--;
+        } else {
+          state.products.splice(itemIndex, 1);
+        }
       }
     },
   },
-  extraReducers: (builder) => {},
 });
 
-export const { addToCart, deleteItem, decrement } = cartSlicer.actions;
-export default cartSlicer.reducer;
+export const { addToCart, deleteItem, decrement } = cartSlice.actions;
+export default cartSlice.reducer;

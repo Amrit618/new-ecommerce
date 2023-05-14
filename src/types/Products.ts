@@ -1,4 +1,5 @@
 export interface Product {
+  quantity: boolean;
   id: number;
   title: string;
   description: string;
