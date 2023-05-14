@@ -6,6 +6,7 @@ export interface Profile {
   email: string;
   avatar: string[];
 }
+
 export interface ProfileReducerState {
   profileList: Profile[];
 }
