@@ -3,6 +3,7 @@ import axios from "axios";
 import { ProfileReducerState } from "../../types/profile";
 
 const initialState: ProfileReducerState = {
+  
   profileList: [],
 };
 
