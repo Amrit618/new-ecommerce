@@ -3,7 +3,7 @@ import axios from "axios";
 import { ProfileReducerState } from "../../types/profile";
 
 const initialState: ProfileReducerState = {
-  
+
   profileList: [],
 };
 
@@ -16,7 +16,6 @@ export const fetchAllUsers = createAsyncThunk("fetchAllUsers", async () => {
     console.log(error);
   }
 });
-
 const profileSlice = createSlice({
   name: "profile reducer",
   initialState: initialState,
