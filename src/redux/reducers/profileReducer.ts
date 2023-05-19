@@ -14,6 +14,7 @@ export const fetchAllUsers = createAsyncThunk("fetchAllUsers", async () => {
     return response.data;
   } catch (error) {
     console.log(error);
+    
   }
 });
 const profileSlice = createSlice({
