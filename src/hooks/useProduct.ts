@@ -13,5 +13,4 @@ const [product, setProduct] = useState<Product | undefined>(undefined);
   }, [productId]);
   return product;
 };
-
 export default useProduct;
